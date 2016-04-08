@@ -1,0 +1,9 @@
+c:\users\dleiva\documents\visual studio 2013\Projects\PartsRanMonthlyBreakdown\PartsRanMonthlyBreakdown\bin\Debug\PartsRanMonthlyBreakdown.exe.config
+c:\users\dleiva\documents\visual studio 2013\Projects\PartsRanMonthlyBreakdown\PartsRanMonthlyBreakdown\bin\Debug\PartsRanMonthlyBreakdown.exe
+c:\users\dleiva\documents\visual studio 2013\Projects\PartsRanMonthlyBreakdown\PartsRanMonthlyBreakdown\bin\Debug\PartsRanMonthlyBreakdown.pdb
+c:\users\dleiva\documents\visual studio 2013\Projects\PartsRanMonthlyBreakdown\PartsRanMonthlyBreakdown\obj\Debug\PartsRanMonthlyBreakdown.csprojResolveAssemblyReference.cache
+c:\users\dleiva\documents\visual studio 2013\Projects\PartsRanMonthlyBreakdown\PartsRanMonthlyBreakdown\obj\Debug\PartsRanMonthlyBreakdown.MainForm.resources
+c:\users\dleiva\documents\visual studio 2013\Projects\PartsRanMonthlyBreakdown\PartsRanMonthlyBreakdown\obj\Debug\PartsRanMonthlyBreakdown.Properties.Resources.resources
+c:\users\dleiva\documents\visual studio 2013\Projects\PartsRanMonthlyBreakdown\PartsRanMonthlyBreakdown\obj\Debug\PartsRanMonthlyBreakdown.csproj.GenerateResource.Cache
+c:\users\dleiva\documents\visual studio 2013\Projects\PartsRanMonthlyBreakdown\PartsRanMonthlyBreakdown\obj\Debug\PartsRanMonthlyBreakdown.exe
+c:\users\dleiva\documents\visual studio 2013\Projects\PartsRanMonthlyBreakdown\PartsRanMonthlyBreakdown\obj\Debug\PartsRanMonthlyBreakdown.pdb
