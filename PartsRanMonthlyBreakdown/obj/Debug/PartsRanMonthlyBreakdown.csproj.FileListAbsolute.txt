@@ -10,3 +10,4 @@ c:\users\dleiva\documents\visual studio 2013\Projects\PartsRanMonthlyBreakdown\P
 C:\Users\ResearchBeast\Documents\Visual Studio 2015\PartsRanMonthlyBreakdown\PartsRanMonthlyBreakdown\bin\Debug\PartsRanMonthlyBreakdown.exe.config
 C:\Users\ResearchBeast\Documents\Visual Studio 2015\PartsRanMonthlyBreakdown\PartsRanMonthlyBreakdown\obj\Debug\PartsRanMonthlyBreakdown.exe
 C:\Users\ResearchBeast\Documents\Visual Studio 2015\PartsRanMonthlyBreakdown\PartsRanMonthlyBreakdown\obj\Debug\PartsRanMonthlyBreakdown.pdb
+C:\Users\dleiva\Documents\Visual Studio 2013\Projects\PartsRanMonthlyBreakdown\PartsRanMonthlyBreakdown\obj\Debug\PartsRanMonthlyBreakdown.PartDetail.resources

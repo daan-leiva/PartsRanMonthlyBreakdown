@@ -26,15 +26,19 @@ namespace PartsRanMonthlyBreakdown
         private void MainForm_Load(object sender, EventArgs e)
         {
             // set up datetime to 1 year before
-            startDateTimePicker.Value.AddYears(-1);
+            startDateTimePicker.Value = startDateTimePicker.Value.AddYears(-1);
 
             // Fill in gridview
-            FillInGridView();
+            FillInGridView(new object(), new EventArgs());
+
+            // add event handlers for datetime picker
+            startDateTimePicker.ValueChanged += this.FillInGridView;
+            endDateTimePicker.ValueChanged += this.FillInGridView;
         }
 
-        private void FillInGridView()
+        private void FillInGridView(object sender, EventArgs e)
         {
-            int num_of_months = ((startDateTimePicker.Value.Year - endDateTimePicker2.Value.Year) * 12) + startDateTimePicker.Value.Month - endDateTimePicker2.Value.Month;
+            int num_of_months = ((endDateTimePicker.Value.Year - startDateTimePicker.Value.Year) * 12) + endDateTimePicker.Value.Month - startDateTimePicker.Value.Month + 1;
 
             // check for value number of months
             if (num_of_months < 1)
@@ -46,7 +50,7 @@ namespace PartsRanMonthlyBreakdown
 
             for (int i = 0; i < num_of_months; i++, currentDate = currentDate.AddMonths(1))
             {
-                query += "\tSUM(CASE WHEN (CAST(jT.Work_Date AS DATETIME) >= CAST('" + currentDate.Year + "" + currentDate.Month.ToString("d2") + "01 00:00:00.000' AS DATETIME) AND CAST(jT.Work_Date AS DATETIME) < CAST('" + currentDate.AddMonths(1).Year + "" + currentDate.AddMonths(1).Month.ToString("d2") + "01 00:00:00.000' AS DATETIME)) THEN jT.Act_Run_Qty ELSE 0 END) AS " + currentDate.Month.ToString("MMM") + "_" + currentDate.Year;
+                query += "\tSUM(CASE WHEN (CAST(jT.Work_Date AS DATETIME) >= CAST('" + currentDate.Year + "" + currentDate.Month.ToString("d2") + "01 00:00:00.000' AS DATETIME) AND CAST(jT.Work_Date AS DATETIME) < CAST('" + currentDate.AddMonths(1).Year + "" + currentDate.AddMonths(1).Month.ToString("d2") + "01 00:00:00.000' AS DATETIME)) THEN jT.Act_Run_Qty ELSE 0 END) AS \"" + currentDate.ToString("MMM") + " " + currentDate.Year + "\"";
                 if (i != num_of_months - 1)
                     query += ",\n";
                 else

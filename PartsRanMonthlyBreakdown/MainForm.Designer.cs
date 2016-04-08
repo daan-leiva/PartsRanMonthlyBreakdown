@@ -31,7 +31,7 @@
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.startDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.endDateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.endDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -45,6 +45,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView.Location = new System.Drawing.Point(39, 123);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.Size = new System.Drawing.Size(961, 87);
@@ -70,13 +71,13 @@
             this.startDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.startDateTimePicker.TabIndex = 2;
             // 
-            // endDateTimePicker2
+            // endDateTimePicker
             // 
-            this.endDateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.endDateTimePicker2.Location = new System.Drawing.Point(800, 88);
-            this.endDateTimePicker2.Name = "endDateTimePicker2";
-            this.endDateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.endDateTimePicker2.TabIndex = 3;
+            this.endDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.endDateTimePicker.Location = new System.Drawing.Point(800, 88);
+            this.endDateTimePicker.Name = "endDateTimePicker";
+            this.endDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.endDateTimePicker.TabIndex = 3;
             // 
             // label2
             // 
@@ -104,7 +105,7 @@
             this.ClientSize = new System.Drawing.Size(1039, 239);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.endDateTimePicker2);
+            this.Controls.Add(this.endDateTimePicker);
             this.Controls.Add(this.startDateTimePicker);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView);
@@ -122,7 +123,7 @@
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker startDateTimePicker;
-        private System.Windows.Forms.DateTimePicker endDateTimePicker2;
+        private System.Windows.Forms.DateTimePicker endDateTimePicker;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
     }

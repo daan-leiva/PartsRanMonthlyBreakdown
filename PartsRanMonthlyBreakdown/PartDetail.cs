@@ -7,11 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Odbc;
 
 namespace PartsRanMonthlyBreakdown
 {
     public partial class PartDetail : Form
     {
+        private static string DSN = "jobboss32";
+        private static string userName = "jbread";
+        private static string password = "Cloudy2Day";
+        string connection_string = "DSN=" + DSN + ";UID=" + userName + ";PWD=" + password;
+
         public PartDetail()
         {
             InitializeComponent();
