@@ -91,7 +91,8 @@ namespace PartsRanMonthlyBreakdown
         private void dataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             // open new form
-
+            Form detail = new PartDetail(startDateTimePicker.Value.AddMonths(e.ColumnIndex).Month, startDateTimePicker.Value.AddMonths(e.ColumnIndex).Year, int.Parse(dataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()));
+            detail.ShowDialog();
         }
     }
 }

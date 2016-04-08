@@ -20,17 +20,31 @@ namespace PartsRanMonthlyBreakdown
 
         int month;
         int year;
+        int total;
 
-        public PartDetail(int month, int year)
+        public PartDetail(int month, int year, int total)
         {
             InitializeComponent();
 
             // set up variables
             this.month = month;
             this.year = year;
+            this.total = total;
         }
 
         private void PartDetail_Load(object sender, EventArgs e)
+        {
+            // update labels
+            monthLabel.Text = new DateTime(year, month, 1).ToString("MMM");
+            yearLabel.Text = year.ToString();
+            totalLabel.Text = total.ToString();
+
+            
+            // fill in data gridview
+            FillInDateGridView();
+        }
+
+        private void FillInDateGridView()
         {
             string query = "SELECT jJ.Part_Number AS \"Part Number\", SUM(jT.Act_Run_Qty) AS \"Run Qty\"\n" +
                             "FROM PRODUCTION.dbo.Job_Operation AS jO\n" +
@@ -38,7 +52,7 @@ namespace PartsRanMonthlyBreakdown
                             "ON jO.Job_Operation = jT.Job_Operation\n" +
                             "LEFT JOIN PRODUCTION.dbo.Job AS jJ\n" +
                             "ON jO.Job = jJ.Job\n" +
-                            "WHERE jT.Act_Run_Qty <> 0 AND CAST(jT.Work_Date AS DATETIME) >= CAST('" + year + "" + month.ToString("00") + "01 00:00:00.000' AS DATETIME) AND CAST(jT.Work_Date AS DATETIME) < CAST('"+year +(month == 1 ? 1 : 0)+"0501 00:00:00.000' AS DATETIME)\n" +
+                            "WHERE jT.Act_Run_Qty <> 0 AND CAST(jT.Work_Date AS DATETIME) >= CAST('" + year + "" + month.ToString("00") + "01 00:00:00.000' AS DATETIME) AND CAST(jT.Work_Date AS DATETIME) < CAST('" + (year + (month == 1 ? 1 : 0)) + "" + (month + 1).ToString("00") + "01 00:00:00.000' AS DATETIME)\n" +
                             "GROUP BY jJ.Part_Number\n" +
                             "ORDER BY Part_Number;";
 
