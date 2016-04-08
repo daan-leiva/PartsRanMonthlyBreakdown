@@ -65,7 +65,6 @@
             // 
             // startDateTimePicker
             // 
-            this.startDateTimePicker.Enabled = false;
             this.startDateTimePicker.Location = new System.Drawing.Point(39, 88);
             this.startDateTimePicker.Name = "startDateTimePicker";
             this.startDateTimePicker.Size = new System.Drawing.Size(200, 20);
@@ -74,7 +73,6 @@
             // endDateTimePicker2
             // 
             this.endDateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.endDateTimePicker2.Enabled = false;
             this.endDateTimePicker2.Location = new System.Drawing.Point(800, 88);
             this.endDateTimePicker2.Name = "endDateTimePicker2";
             this.endDateTimePicker2.Size = new System.Drawing.Size(200, 20);
